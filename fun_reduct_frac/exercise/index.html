@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Dg_Han">
+    <meta name="keyword" content="mathematics, interesting, reduction of fraction">
+
+    <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./script/main.js"></script>
+    <style>
+        div{
+            margin-top: 25px;
+        }
+        button{
+            display: block;
+            margin-top: 25px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: -1px -1px 1px black, 1px 1px 1px black;
+        }
+        #frac{
+            display: inline;
+        }
+        .frac_input{
+            display: inline-block;
+        }
+        .frac hr{
+            margin-top: 1px;
+            margin-bottom: 1px;
+        }
+        .frac_input input{
+            display: inline-block;
+            width: 80px;
+            height: 20px;
+            border-radius: 3px;
+            align-items: center;
+            border: none;
+            box-shadow: -1px -1px 1px black, 1px 1px 1px black;
+            }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function hotkey(event){
+            if (event.keyCode == 13){
+                handling();
+            }
+        }
+        window.addEventListener("keydown", hotkey);
+    </script>
+</head>
+
+<body>
+    <h1>分数化简练习<span style="color:grey; font-size: small;"><del>（笑</del></span></h1>
+    <div align="center">
+        <span id="frac">
+
+        </span>
+        <div class="frac_input" style="width:120px;">
+            <input type="text" id="num">
+            <div style="height: 1px; border-top: 1px grey solid; margin-top: 5px; margin-bottom: 3px;"></div>
+            <input type="text" id="denom">
+        </div>
+        <button id="btn" type="button" onclick="handling()">check</button>
+    </div>
+    <div id="react" align="center" style="margin-top: 50px">
+
+    </div>
+</body>
