@@ -5,22 +5,41 @@
     <meta name="keyword" content="mathematics, interesting, reduction of fraction">
     <title>一点小小的数学震撼</title>
 
+    <link rel="stylesheet" type="text/css" href="style/style.css">
     <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
     <script type="text/javascript" src="./script/main.js"></script>
 </head>
 <body>
     <!-- \[\dfrac{1\bcancel{6}}{\bcancel{6}4} = \dfrac{1}{4}\] -->
     <div align="center" style="margin-top: 100px">
-        <button type="button" onclick="get_fun_frac()">获取一点小小的数学震撼</button>
+        <button type="button" id="btn_main" onclick="get_fun_frac()">缓存加载中，请稍后...</button>
     </div>
     <!-- src="https://latex.codecogs.com/svg.image?" -->
-    <div id="math_pic" align="center" style="margin-top: 100px">
+    <div id="math_pic" class="web_pic" align="center" style="margin-top: 100px">
 
     </div>
     <div id="details" align="center" style="margin-top: 20px">
         <a id="detail_hint" href="javascript:show_details()"></a>
-        <div id="detail_pic"></div>
+        <div id="detail_pic" class="web_pic"></div>
+    </div>
+    <div class="footer">
+        <span class="left">
+            <span style="color:forestgreen">fun reduct frac</span>
+             by 
+            <span style="color:blueviolet">Dg_Han</span>,
+            2023
+        </span>
+        <span class="right">
+            <ul>
+                <li>
+                    <a href="https://dg-han.github.io/mathematics/fun_reduct_frac/exercise">练习<del>整蛊</del>页面</a>
+                </li>
+                <li>
+                    <a href="https://dg-han.github.io" style="border-left: 2px lightgrey solid; padding-left: 5px;">主站</a>
+                </li>
+            </ul>
+        </span>
     </div>
 </body>
