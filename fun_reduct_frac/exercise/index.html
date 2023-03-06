@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Dg_Han">
     <meta name="keyword" content="mathematics, interesting, reduction of fraction">
+    <title>分数化简练习</title>
 
     <script src="https://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="./script/main.js"></script>
@@ -41,6 +42,10 @@
         h1{
             text-align: center;
         }
+        .web_pic{
+            font-size: 12px;
+            color: grey;
+        }
     </style>
     <script>
         function hotkey(event){
@@ -55,17 +60,17 @@
 <body>
     <h1>分数化简练习<span style="color:grey; font-size: small;"><del>（笑</del></span></h1>
     <div align="center">
-        <span id="frac">
+        <span id="frac" class="web_pic">
 
         </span>
-        <div class="frac_input" style="width:120px;">
+        <div class="frac_input" style="width:120px; display:none;">
             <input type="text" id="num">
             <div style="height: 1px; border-top: 1px grey solid; margin-top: 5px; margin-bottom: 3px;"></div>
             <input type="text" id="denom">
         </div>
         <button id="btn" type="button" onclick="handling()">check</button>
     </div>
-    <div id="react" align="center" style="margin-top: 50px">
+    <div id="react" class="web_pic" align="center" style="margin-top: 50px">
 
     </div>
 </body>
