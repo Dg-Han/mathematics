@@ -1,3 +1,53 @@
+:root{
+    --color-background: #FFF;
+    --color-on-background: #000;
+    --color-primary: #DDD;
+    --color-on-primary: #000;
+    color-scheme: light dark;
+}
+
+.project_name{
+    color: forestgreen;
+}
+
+.author_name{
+    color: blueviolet;
+}
+
+.dark-mode{
+    color-scheme: dark;
+    --color-background: #012;
+    --color-on-background: #ABC;
+    --color-primary: #12A;
+    --color-on-primary: #6f6b70;
+}
+
+.dark-mode svg{
+    fill: cornsilk;
+    color: #1e83d6;
+}
+
+.dark-mode .project_name{
+    color: darkgreen;
+}
+
+.dark-mode .author_name{
+    color: darkviolet;
+}
+
+.dark-mode .footer{
+    background: #777;
+}
+
+body{
+    background: var(--color-background);
+    color: var(--color-on-background);
+}
+
+*{
+    box-sizing: border-box;
+}
+
 ul, li{
     padding: 0;
     margin: 0;
@@ -23,23 +73,47 @@ del{
 }
 
 .footer a{
+    display: inline-block;
     text-decoration: none;
     color: #1e875a;
     font-weight: 600;
 }
 
 .footer .left{
-    position: absolute;
-    left: 0;
+    float: left;
     margin-left: .5rem;
 }
 
 .footer .right{
-    position: absolute;
-    right: 0;
+    float: right;
     margin-right: .5rem;
 }
 
-.footer .right li{
-    display: inline-block;
+.footer .right .hline{
+    border-left: 2px lightgrey solid;
+    margin-right: 5px
+}
+
+@media only screen and (orientation: portrait){
+    .footer{
+        height: auto;
+        bottom: 0;
+        width: 100%;
+    }
+    .footer *{
+        width: 100%;
+        text-align: center;
+    }
+    .footer div{
+        display: inline-block;
+    }
+    .footer .left{
+        position: relative;
+    }
+    .footer .right{
+        position: relative;
+    }
+    .footer .right .hline{
+        display:none
+    }
 }
